@@ -6,6 +6,9 @@
     <li class="nav-item">
       <router-link to="/gerentes" class="nav-link">Gerentes</router-link>
     </li>
+     <li class="nav-item">
+      <router-link to="/imovel" class="nav-link">Imoveis</router-link>
+    </li>
     <li class="nav-item">
       <a href="#" class="nav-link" @click.prevent="efetuarLogout">Logout</a>
     </li>

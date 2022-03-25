@@ -5,8 +5,8 @@ import http from '@/http'
 Vue.use(Vuex)
 
 const estado = {
-    token: null,
-    usuario: {}
+    token: localStorage.getItem('token') || null,
+    usuario: localStorage.getItem('usuario') || {},
 }
 
 const mutations = {
@@ -17,6 +17,8 @@ const mutations = {
     DESLOGAR_USUARIO(state) {
         state.token = null
         state.usuario = {}
+        localStorage.removeItem('usuario');
+        localStorage.removeItem('token');
     }
 }
 
@@ -25,6 +27,8 @@ const actions = {
         return new Promise((resolve, reject) => {
             http.post('auth', usuario)
                 .then(response => {
+                    localStorage.setItem('usuario', response.data.user);
+                    localStorage.setItem('token', response.data.token);
                     commit('DEFINIR_USUARIO_LOGADO', {
                         token: response.data.token,
                         usuario: response.data.user

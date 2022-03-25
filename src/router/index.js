@@ -4,7 +4,9 @@ import Gerentes from '../views/Gerentes.vue'
 import Home from '../views/Home.vue'
 import NovoUsuario from '../views/NovoUsuario.vue'
 import Login from '../views/Login.vue'
+import Imovel from '../views/Imovel.vue'
 import store from '@/store'
+
 
 Vue.use(VueRouter)
 
@@ -31,6 +33,14 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login,
+    meta: {
+      publica: true
+    }
+  },
+  {
+    path: '/imovel',
+    name: 'imovel',
+    component: Imovel,
     meta: {
       publica: true
     }
