@@ -4,7 +4,7 @@
       <router-link class="nav-link" to="/">Home</router-link>
     </li>
     <li class="nav-item">
-      <router-link to="/gerentes" class="nav-link">Gerentes</router-link>
+      <router-link to="/users" class="nav-link">Usuários</router-link>
     </li>
      <li class="nav-item">
       <router-link to="/imovel" class="nav-link">Imoveis</router-link>

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Gerentes from '../views/Gerentes.vue'
+import Users from '../views/Users.vue'
 import Home from '../views/Home.vue'
 import NovoUsuario from '../views/NovoUsuario.vue'
 import Login from '../views/Login.vue'
@@ -17,17 +17,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/gerentes',
-    name: 'gerentes',
-    component: Gerentes
+    path: '/users',
+    name: 'users',
+    component: Users
   },
   {
     path: '/cadastre-se',
     name: 'novo.usuario',
-    component: NovoUsuario,
-    meta: {
-      publica: true
-    }
+    component: NovoUsuario    
   },
   {
     path: '/login',

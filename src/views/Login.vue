@@ -12,7 +12,7 @@
       </div>
       <p class="alert alert-danger" v-if="mensagemErro"> {{ mensagemErro }}</p>
       <button type="submit" class="btn btn-primary brn-block">Logar</button>
-      <router-link :to="{ name: 'novo.usuario' }">Não possui um cadastro, cadastre-se aqui!</router-link>
+     
     </form>
   </div>
 </template>
@@ -30,7 +30,7 @@ export default {
       this.$store
         .dispatch("efetuarLogin", this.usuario)
         .then(() => {
-            this.$router.push({ name: "gerentes" })
+            this.$router.push({ name: "users" })
             this.mensagemErro = '';
         })
         .catch(erro =>{
